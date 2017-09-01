@@ -35,8 +35,8 @@ firewall-cmd --permanent --zone=public --add-port=7077/tcp
 firewall-cmd --permanent --zone=public --add-port=8080-8081/tcp
 firewall-cmd --reload
 
-echo 'export PATH=$PATH:/usr/lib/scala/bin' >> ~/.bashrc
-echo 'export SPARK_HOME=$HOME/spark-1.6.0-bin-hadoop2.6' >> ~/.bashrc
-echo 'export PATH=$PATH:$SPARK_HOME/bin' >> ~/.bashrc
-source ~/.bashrc                    
--- INSERT --                                                                                  1,12          Top
+echo 'export PATH=$PATH:/usr/lib/scala/bin' >> ~/.bash_profile
+echo 'export SPARK_HOME=$HOME/spark-2.2.0-bin-hadoop2.7' >> ~/.bash_profile
+echo 'export PATH=$PATH:$SPARK_HOME/bin' >> ~/.bash_profile
+source ~/.bash_profile
+##execute  /etc/profile -> (~/.bash_profile | ~/.bash_login | ~/.profile) -> ~/.bashrc -> /etc/bashrc -> ~/.bash_logout
