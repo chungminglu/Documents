@@ -4,8 +4,8 @@
 ## install java
 cd /home/minglu
 wget http://ftp.wsisiz.edu.pl/pub/pc/pozyteczne%20oprogramowanie/java/jdk-8u144-linux-x64.rpm
-sudo rpm -ivh /home/minglu/jdk-8u131-linux-x64.rpm
-rm /home/minglu/jdk-8u131-linux-x64.rpm
+sudo rpm -ivh /home/minglu/jdk-8u144-linux-x64.rpm
+rm /home/minglu/jdk-8u144-linux-x64.rpm
 
 ##install scala
 
@@ -26,13 +26,11 @@ firewall-cmd --reload
 
 
 
-echo 'export SCALA_HOME=/home/minglu/scala-2.11.11' >> ~/.bashrc
-echo 'export PATH=$SCALA_HOME/bin:$PATH' >> ~/.bashrc
-echo 'export SPARK_HOME=/home/minglu/spark-2.2.0-bin-hadoop2.7' >> ~/.bashrc
-echo 'export PATH=$SPARK_HOME/bin:$PATH' >> ~/.bashrc
-echo 'export JAVA_HOME=/home/minglu/jdk1.8.0_144' >> ~/.bashrc
-echo 'export PATH=$JAVA_HOME/bin:$PATH' >> ~/.bashrc
-source ~/.bashrc
+echo 'export SCALA_HOME=/home/minglu/scala-2.11.11' >> /etc/profile
+echo 'export PATH=$SCALA_HOME/bin:$PATH' >> /etc/profile
+echo 'export SPARK_HOME=/home/minglu/spark-2.2.0-bin-hadoop2.7' >> /etc/profile
+echo 'export PATH=$SPARK_HOME/bin:$PATH' >> /etc/profile
+source /etc/profile
 
 
 java -version
